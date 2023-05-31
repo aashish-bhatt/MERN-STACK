@@ -1,4 +1,4 @@
-const Category = require("../models/Categorymodel");
+const Category = require("../models/CategoryModel");
 const getCategories = async (req, res, next) => {
   try {
     const categories = await Category.find({}).sort({ name: "asc" }).orFail();
