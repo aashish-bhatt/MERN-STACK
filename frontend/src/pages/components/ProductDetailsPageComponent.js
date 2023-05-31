@@ -10,7 +10,7 @@ import {
 } from "react-bootstrap";
 import { Rating } from "react-simple-star-rating";
 import AddedToCartMessageComponent from "../../components/AddedToCartMessageComponent";
-
+import MetaComponent from "../../components/MetaComponent";
 import ImageZoom from "js-image-zoom";
 import { useEffect, useState,useRef } from "react";
 
@@ -95,6 +95,8 @@ const ProductDetailsPageComponent = ({
   }
 
   return (
+    <>
+    <MetaComponent title={product.name} description={product.description}/>
     <Container>
       <AddedToCartMessageComponent
         showCartMessage={showCartMessage}
@@ -222,7 +224,8 @@ const ProductDetailsPageComponent = ({
           </>
         )}
       </Row>
-    </Container>
+    </Container></>
+    
   );
 };
 

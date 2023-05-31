@@ -3,6 +3,7 @@ import {Row ,Container} from 'react-bootstrap'
 import CategoryCardComponent from '../../components/CategoryCardComponent'
 import ProductCarouselComponent from '../../components/ProductCarouselComponent'
 import { useEffect,useState } from 'react'
+import MetaComponent from '../../components/MetaComponent'
 const HomepageComponent = ({categories}) => {
   // const categories =[
   //   "Stationary",
@@ -20,6 +21,7 @@ const HomepageComponent = ({categories}) => {
 
   return (
     <>
+    <MetaComponent/>
     <ProductCarouselComponent/>
     <Container>
     <Row xs={1} md={2} className="g-4 mt-5">
