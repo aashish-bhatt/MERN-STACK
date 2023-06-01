@@ -105,7 +105,7 @@ const UserOrderDetailsPageComponent = ({
               </Form.Select>
             </Col>
             <Row>
-              <Col>
+              <Col md={6}>
                 <Alert
                   className="mt-3"
                   variant={isDelivered ? "success" : "danger"}
@@ -115,11 +115,6 @@ const UserOrderDetailsPageComponent = ({
                   ) : (
                     <> Not Delivered</>
                   )}
-                </Alert>
-              </Col>
-              <Col>
-                <Alert className="mt-3" variant={isPaid ? "success" : "danger"}>
-                  {isPaid ? <>Paid on {isPaid}</> : <>Not paid yet</>}
                 </Alert>
               </Col>
             </Row>

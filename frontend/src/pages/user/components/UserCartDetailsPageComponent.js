@@ -112,14 +112,9 @@ const UserCartDetailsPageComponent = ({
               </Form.Select>
             </Col>
             <Row>
-              <Col>
+              <Col md={6}>
                 <Alert className="mt-3" variant="danger">
                   Not Delivered.{missingAddress}
-                </Alert>
-              </Col>
-              <Col>
-                <Alert className="mt-3" variant="danger">
-                  Not paid yet
                 </Alert>
               </Col>
             </Row>

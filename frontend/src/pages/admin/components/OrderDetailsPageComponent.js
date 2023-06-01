@@ -73,7 +73,7 @@ const OrderDetailsPageComponent = ({ getOrder, markAsDelivered }) => {
               </Form.Select>
             </Col>
             <Row>
-              <Col>
+              <Col md={6}>
                 <Alert
                   className="mt-3"
                   variant={isDelivered ? "success" : "danger"}
@@ -83,11 +83,6 @@ const OrderDetailsPageComponent = ({ getOrder, markAsDelivered }) => {
                   ) : (
                     <>Not delivered</>
                   )}
-                </Alert>
-              </Col>
-              <Col>
-                <Alert className="mt-3" variant={isPaid ? "success" : "danger"}>
-                  {isPaid ? <>Paid on {isPaid}</> : <>Not Paid yet</>}
                 </Alert>
               </Col>
             </Row>
