@@ -32,10 +32,8 @@ const LoginPageComponent = ({ loginUserApiRequest,reduxDispatch,setReduxUserStat
             reduxDispatch(setReduxUserState(res.userLoggedIn))
           }
 
-          if (res.success === "user logged in" && !res.userLoggedIn.isAdmin)
-            // by doing this replace=true means now if i login and then click on back button i did not go to login page
-            window.location.href ="/user"
-          else window.location.href ="/admin/orders"
+          if (res.success === "user logged in" && !res.userLoggedIn.isAdmin) window.location.assign('/user') 
+            else window.location.assign('/admin/orders')
         })
         .catch((er) =>
           setLoginUserResponseState({

@@ -25,6 +25,7 @@ const UserOrderDetailsPageComponent = ({
   const [cartSubtotal, setCartSubtotal] = useState(0);
   const [isDelivered, setIsDelivered] = useState(false);
   const [buttonDisabled, setButtonDisabled] = useState(false);
+  const [orderFinished, setOrderFinished] = useState(false);
   const paypalContainer = useRef();
   const { id } = useParams();
   useEffect(() => {
@@ -57,6 +58,9 @@ const UserOrderDetailsPageComponent = ({
             setButtonDisabled(true);
             setOrderButtonMessage("Wait for your order. you pay on delivery");
           }
+        }
+        if (data.isDelivered) {
+          setOrderFinished(true); // Set orderFinished to true if the order is delivered
         }
       })
       .catch((err) => console.log(err));
@@ -151,7 +155,7 @@ const UserOrderDetailsPageComponent = ({
                   type="button"
                   disabled={buttonDisabled}
                 >
-                  {orderButtonMessage}
+                  {isDelivered || orderFinished ? "Your order is successful" : orderButtonMessage}
                 </Button>
               </div>
               <div style={{ position: "relative", zIndex: 1 }}>

@@ -42,7 +42,7 @@ const OrdersPageComponent = ({ getOrders }) => {
               <tr key={idx}>
                 <td>{idx + 1}</td>
                 <td>
-                  {order.user != null ? (
+                  {order.user !== null ? (
                     <>
                       {order.user.name} {order.user.lastName}
                     </>
