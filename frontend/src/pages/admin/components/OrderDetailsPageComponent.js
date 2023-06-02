@@ -66,7 +66,7 @@ const OrderDetailsPageComponent = ({ getOrder, markAsDelivered }) => {
             <Col md={6}>
               <h2>Payment Method</h2>
               <Form.Select value={paymentMethod} disabled={true}>
-                <option value="pp">Paypal</option>
+                {/* <option value="pp">Paypal</option> */}
                 <option value="cod">
                   Cash On Delivery
                 </option>
