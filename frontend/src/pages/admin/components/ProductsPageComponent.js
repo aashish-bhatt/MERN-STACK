@@ -54,6 +54,7 @@ const ProductsPageComponent = ({ fetchProducts, deleteProduct }) => {
             <tr>
               <th>No</th>
               <th>Product Name</th>
+              <th>In Stock</th>
               <th>Price</th>
               <th>Category</th>
               <th>Edit/Delete</th>
@@ -64,6 +65,7 @@ const ProductsPageComponent = ({ fetchProducts, deleteProduct }) => {
               <tr key={idx}>
                 <td>{idx + 1}</td>
                 <td>{item.name}</td>
+                <td>{item.count}</td>
                 <td>{item.price}</td>
                 <td>{item.category}</td>
                 <td>

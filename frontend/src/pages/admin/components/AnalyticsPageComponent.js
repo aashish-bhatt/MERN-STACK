@@ -36,7 +36,7 @@ const AnalyticsPageComponent = ({
       var orderDate = new Date(newOrder.createdAt).toLocaleString("en-US", {
         hour: "numeric",
         hour12: true,
-        timeZone: "UTC",
+        timeZone: "Asia/Kolkata",
       });
       if (new Date(newOrder.createdAt).toDateString() === today) {
         if (today === new Date(firstDateToCompare).toDateString()) {
@@ -111,7 +111,7 @@ const AnalyticsPageComponent = ({
           var date = new Date(order.createdAt).toLocaleString("en-US", {
             hour: "numeric",
             hour12: true,
-            timeZone: "UTC",
+            timeZone: "Asia/Kolkata",
           });
           return { name: date, [firstDateToCompare]: orderSum };
         });
@@ -131,7 +131,7 @@ const AnalyticsPageComponent = ({
           var date = new Date(order.createdAt).toLocaleString("en-US", {
             hour: "numeric",
             hour12: true,
-            timeZone: "UTC",
+            timeZone: "Asia/Kolkata",
           });
           return { name: date, [secondDateToCompare]: orderSum };
         });
@@ -160,8 +160,7 @@ const AnalyticsPageComponent = ({
       </Col>
       <Col md={10}>
         <h1>
-          Compare Revenue Between {firstDateToCompare} VS{" "}
-          {secondDateToCompare}
+          Compare Revenue Between {firstDateToCompare} VS {secondDateToCompare}
         </h1>
         <Form.Group controlId="firstDateToCompare">
           <Form.Label>Select First Date To Compare</Form.Label>

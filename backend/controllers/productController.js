@@ -138,9 +138,10 @@ const getBestsellers = async (req, res, next) => {
 
 const adminGetProducts = async (req, res, next) => {
   try {
+    
     const products = await Product.find({})
       .sort({ category: 1 })
-      .select("name price category");
+      .select("name price category count");
     return res.json(products);
   } catch (err) {
     next(err);

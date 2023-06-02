@@ -45,13 +45,14 @@ const HeaderComponent = () => {
       } else {
         navigate(
           `/product-list/category/${searchCategoryToggle.replace(
-            /\//g,","
+            /\//g,
+            ","
           )}/search/${searchQuery}`
         );
       }
     } else if (searchCategoryToggle !== "All") {
       navigate(
-        `/product-list/category/${searchCategoryToggle.replace(/\//g,",")}`
+        `/product-list/category/${searchCategoryToggle.replace(/\//g, ",")}`
       );
     } else {
       navigate("/product-list");
